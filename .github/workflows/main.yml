@@ -23,4 +23,4 @@ jobs:
       - name: Executar script de email
         env:
           GMAIL_PASSWORD: ${{ secrets.GMAIL_PASSWORD }}
-        run: python seu_script.py
+        run: main.py
