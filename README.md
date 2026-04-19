@@ -1,4 +1,4 @@
 # Portfólio Victor Koba
-HTML/CSS
-JavaScript
-Python
+## HTML/CSS
+## JavaScript
+## Python
