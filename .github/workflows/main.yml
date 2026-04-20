@@ -25,5 +25,4 @@ jobs:
       - name: Executar script de email
         env:
           GMAIL_PASSWORD: ${{ secrets.GMAIL_PASSWORD }}
-          # Adicione as outras variáveis de e-mail se o seu script as exigir
-        run: python main.py # Comando correto para rodar o script
+        run: python app/main.py
