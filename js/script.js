@@ -113,7 +113,7 @@ async function sendMsg(e) {
     btn.textContent = 'Enviando...';
     btn.style.opacity = '0.5';
 
-    const response = await fetch('http://127.0.0.1:8000/send-email', {
+    const response = await fetch('https://portfoliovictorkoba.onrender.com/send-email', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
