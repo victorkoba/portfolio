@@ -26,9 +26,7 @@ jobs:
 
       - name: Executar script de email
         env:
-          env:
           MAIL_PASSWORD: ${{ secrets.GMAIL_PASSWORD }} 
-          
           MAIL_USERNAME: ${{ secrets.MAIL_USERNAME }}
           MAIL_FROM: ${{ secrets.MAIL_FROM }}
         run: python app/main.py
