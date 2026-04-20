@@ -3,6 +3,10 @@ name: Python Code Quality & Tests
 on:
   push:
     branches: [ "main" ]
+    paths:
+      - 'app/**'
+      - 'requirements.txt'
+      - '.github/workflows/**'
   pull_request:
     branches: [ "main" ]
   workflow_dispatch:
