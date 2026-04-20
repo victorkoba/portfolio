@@ -6,14 +6,16 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     steps:
       - name: Checkout do código
-        uses: actions/checkout@v4 # Atualizado para v4
+        uses: actions/checkout@v4
 
       - name: Configurar Python
-        uses: actions/setup-python@v5 # Atualizado para v5
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.12' # Versão estável e disponível
+          python-version: '3.12'
           cache: 'pip'
 
       - name: Instalar dependências
