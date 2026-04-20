@@ -652,22 +652,10 @@ img { max-width: 100%; display: block; }
 }
 .skill-items {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); 
+  grid-template-columns: repeat(4, 1fr); 
   gap: 20px; 
   justify-items: center; 
   padding: 20px 0;
-}
-.posicao-especifica-opencv {
-  grid-row: 3;
-  grid-column: 4;
-}
-.posicao-especifica-mongodb {
-  grid-row: 3;
-  grid-column: 3;
-}
-.posicao-especifica-mysql {
-  grid-row: 3;
-  grid-column: 2;
 }
 .skill-item {
   display: flex;
