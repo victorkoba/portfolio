@@ -1,13 +1,20 @@
-name: Enviar Email
+name: Python Code Quality & Tests
 
 on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - 'app/**'
+      - 'requirements.txt'
+      - '.github/workflows/**'
+  pull_request:
+    branches: [ "main" ]
   workflow_dispatch:
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
     steps:
       - name: Checkout do código
         uses: actions/checkout@v4
@@ -21,12 +28,15 @@ jobs:
       - name: Instalar dependências
         run: |
           python -m pip install --upgrade pip
-          # Ajuste o caminho se o arquivo estiver na raiz ou em app/
           pip install -r app/requirements.txt
+          pip install pytest httpx
 
-      - name: Executar script de email
+      - name: Rodar Testes Automatizados
         env:
-          MAIL_PASSWORD: ${{ secrets.GMAIL_PASSWORD }} 
-          MAIL_USERNAME: ${{ secrets.MAIL_USERNAME }}
-          MAIL_FROM: ${{ secrets.MAIL_FROM }}
-        run: python app/main.py
+          MAIL_USERNAME: test@example.com
+          MAIL_PASSWORD: fake_password_1234
+          MAIL_FROM: test@example.com
+          MAIL_PORT: 587
+          MAIL_SERVER: smtp.gmail.com
+        run: |
+          pytest
