@@ -23,7 +23,7 @@ Para garantir que a aplicação em produção nunca sofra interrupções por err
 - Automated Testing: O Pytest executa a suíte de testes da API.
 - Deployment: Se (e somente se) todos os testes passarem, o código é liberado para o Render.
 
-- Nota: Isso evita o "quebrar em produção", garantindo que apenas builds estáveis cheguem ao usuário final.
+-- Nota: Isso evita o "quebrar em produção", garantindo que apenas builds estáveis cheguem ao usuário final.
 
 ---
 
